@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+}
+
+main{
+    color: #fff;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-image: url('2.jpg');
+}
+
+header{
+    width: 100%;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar ul li{
+    margin: 0 12px;
+    font-weight: 700;
+    position: relative;
+}
+
+.navbar li a{
+    padding: 6px 0px;
+}
+
+.navbar ul li::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Initially set the width to 0 */
+    height: 1px; /* Set the height of the underline */
+    background-color: #fff; /* Set the color of the underline */
+    transition: width 0.3s ease; /* Add a transition effect to the width */
+}
+
+.navbar ul li:hover::before {
+    width: 100%; /* Expand the width to 100% on hover */
+}
+
+.tagline{
+    margin: 120px auto 0;
+    color: #ffffff;
+    width: 1000px;
+}
+.tagline h2{
+    font-size: 72px;
+    text-align: center;
+}
+
+/* Pricing section  */
+
+.fa-check{
+    color: rgb(43, 201, 114);
+}
+
+.pricing-section{
+    margin: 120px 0;
+}
+.pricing-section h2{
+    padding: 48px;
+    font-size: 48px;
+}
+.price-details button{
+    margin: 6px auto;
+    padding: 4px 8px;
+    display: block;
+    background-color: #3db326;
+    cursor: pointer;
+}
+.price-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.price{
+    padding: 8px 4px;
+    border: 1px solid black;
+}
+.price p{
+    margin: 10px;
+}
+.price p:first-child{
+    text-align: center;
+}
+.price h3{
+    text-align: center;
+    font-size: 36px;
+    border-bottom: 1px solid black;
+}
+
+/* Gym section  */
+
+.gym-section{
+    background-image: url('3.jpg');
+}
