@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Baloo Bhaijaan 2", sans-serif;
 }
@@ -408,7 +412,83 @@ header {
 
 .contact{
     background-color: #000;
+    color: #cacaca;
+}
+
+.contact h2{
+    padding: 32px 0 0 32px;
+    font-size: 48px;
     color: #fff;
+}
+
+.contact-col{
+    padding: 0 0 32px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.contact-col h5{
+    font-size: 24px;
+}
+
+.quick-links ul li:hover{
+    color: #ff0000;
+}
+
+.contact-details{
+    margin: 6px 0;
+}
+.social-links{
+    width: 100%;
+}
+.social-links i{
+    margin: 4px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.social-links i:hover{
+    color: #ff0000;
+}
+
+.get-in-touch input{
+    padding: 16px 8px;
+    font: 16px;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #111111;
+    color: #fff;
+}
+
+.get-in-touch button{
+    margin: 8px 0;
+    padding: 10px 24px;
+    font-size: 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 0 0 15px 0;
+    transition: 0.1s ease-in;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.1s ease-in;
+}
+.get-in-touch button:hover{
+    transform: scale(1.1);
+}
+
+/* Footer  */
+
+footer{
+    padding: 32px;
+    width: 100%;
+    color: #fff;
+    background-color: #111111;
+}
+footer h2{
+    margin: auto;
+    width: fit-content;
 }
 
 /* --------------------------------------------------------------- */
