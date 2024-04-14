@@ -13,6 +13,7 @@ html{
 body {
     font-family: "Baloo Bhaijaan 2", sans-serif;
     position: relative;
+    overflow-x: hidden;
 }
 
 .banner {
@@ -208,10 +209,19 @@ header {
 
 .price-details button {
     margin: 6px auto;
-    padding: 4px 8px;
+    padding: 8px 18px;
     display: block;
+    border: none;
     background-color: #3db326;
     cursor: pointer;
+    font-weight: 900;
+    border-radius: 4px;
+    /* color: #fff; */
+    transition: all 0.3s ease;
+    animation: jump 1s infinite alternate;
+}
+.price-details button:hover{
+    background-color: #39d819;
 }
 
 .price-details {
@@ -223,7 +233,7 @@ header {
 
 .price {
     padding: 8px 4px;
-    border: 15px solid #ff0000;
+    border: 5px solid #ff0000;
     border-radius: 0 40px 0 40px;
     background-color: rgba(255, 255, 255, 0.3);
     color: #fff;
@@ -403,7 +413,7 @@ header {
 .about-image img{
     margin: auto;
     display: block;
-    border: 15px solid #ff0000; 
+    border: 5px solid #ff0000; 
     border-radius: 0 40px 0 40px; 
     width: 520px;
     height: auto;
@@ -472,6 +482,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.discount h2{
+    animation: jump 1s infinite alternate;
 }
 
 .discount h3{
@@ -594,4 +608,72 @@ footer h2{
 ::-webkit-scrollbar-thumb {
     background: #ff0000;
     /* border-radius: 5px; */
+}
+
+/* ----------------------------------------------------------- */
+
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 0.5s;
+}
+
+.about-detail{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 0.5s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduce-motion){
+    .hidden{
+        transition: none;
+    }
+}
+
+/* ------------------------------------------- */
+
+/* Jumping button  */
+
+@keyframes jump {
+    0% {
+        transform: scale(1);
+    }
+    10% {
+        transform: scale(1.025);
+    }
+    20% {
+        transform: scale(1.05);
+    }
+    30% {
+        transform: scale(1.075);
+    }
+    40% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    70% {
+        transform: scale(1.075);
+    }
+    80% {
+        transform: scale(1.05);
+    }
+    90% {
+        transform: scale(1.025);
+    }
+    100% {
+        transform: scale(1); /* Adjust the value to control the jump height */
+    }
 }
